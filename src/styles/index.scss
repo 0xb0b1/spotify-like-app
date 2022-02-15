@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.has-tooltip:hover .tooltip {
+  visibility: visible;
+  z-index: 100;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.h-home {
+  height: calc(100vh - 4rem);
+}
+
+// .linear-grad {
+//   background: linear-gradient(143.8deg, rgba(255, 100, 250, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+// }
+
+.btn-disable.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn-hover:hover:not(:disabled) {
+  filter: brightness(0.7);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.span-playlist {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #DDD;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+th {
+  font-family: "Lexend", sans-serif;
+  opacity: 0.8;
+}
