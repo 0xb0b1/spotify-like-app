@@ -1,9 +1,5 @@
 import axios from "axios";
 
-const api = axios.create({
-  headers: {
-    Authorization: `Basic ${process.env.BASE64_ENCODED_ID}`,
-  },
+export const api = axios.create({
+  baseURL: "https://api.spotify.com/v1",
 });
-
-export default api;

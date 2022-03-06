@@ -1,5 +1,5 @@
 {
-  "name": "spotify-clone",
+  "name": "music-organizer",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
+    "@types/node": "^17.0.18",
+    "@types/qs": "^6.9.7",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/react-icons": "^3.0.0",
@@ -29,6 +31,7 @@
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.22",
     "typescript": "^4.5.4",
-    "vite": "^2.8.0"
+    "vite": "^2.8.0",
+    "vite-plugin-environment": "^1.1.0"
   }
 }

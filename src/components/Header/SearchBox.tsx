@@ -4,6 +4,10 @@ import { RiSearchLine } from "react-icons/ri";
 export const SearchBox = () => {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  function handleSearch(ref: any) {
+    console.log(ref)
+  }
+
   return (
     <label className="hidden md:flex flex-1 py-2 px-4 ml-20 max-w-min relative items-center text-gray-100 bg-gray-800 rounded-full">
       <input
@@ -12,7 +16,7 @@ export const SearchBox = () => {
         placeholder="Search"
         ref={searchInputRef}
       />
-      <RiSearchLine size={22} className="items-center" />
+      <RiSearchLine size={22} onClick={() => handleSearch(searchInputRef)} className="items-center" />
     </label>
   );
 };

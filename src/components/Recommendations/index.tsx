@@ -5,6 +5,8 @@ import { useRefreshToken } from "../../hooks/RefreshToken";
 
 import { RiHeart3Line, RiAddFill } from "react-icons/ri";
 import playGreen from "../../assets/play-green.svg";
+import { api } from "../../services/api";
+import { Loading } from "../Loading";
 
 interface FeaturedPlaylistsProps {
   playlists: {
@@ -26,9 +28,9 @@ interface FeaturedPlaylistsProps {
 }
 
 export const Recommendations = () => {
-  const { token, getRefreshToken } = useRefreshToken();
+  const { getRefreshToken } = useRefreshToken();
   const [isLoading, setIsLoading] = useState(true);
-  const [topTracks, setTopTracks] = useState();
+  // const [topTracks, setTopTracks] = useState();
   const [featuredPlaylists, setFeaturedPlaylists] =
     useState<FeaturedPlaylistsProps>();
 
@@ -37,22 +39,16 @@ export const Recommendations = () => {
 
     const getFeaturedPlaylists = async () => {
       const myToken = await getRefreshToken();
-      try {
-        const response = await axios.get(
-          "https://api.spotify.com/v1/browse/featured-playlists?offset=0&limit=6",
-          {
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-              Authorization: "Bearer " + myToken,
-            },
-          }
-        );
-        setFeaturedPlaylists(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        throw error;
-      }
+      api
+        .get("/browse/featured-playlists?offset=0", {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + myToken,
+          },
+        })
+        .then((response) => setFeaturedPlaylists(response.data))
+        .finally(() => setIsLoading(false));
     };
     getFeaturedPlaylists();
 
@@ -61,7 +57,7 @@ export const Recommendations = () => {
     };
   }, []);
 
-  if (isLoading) return <div>Loading</div>;
+  if (isLoading) return <Loading />;
 
   return (
     <section className="pb-8">
