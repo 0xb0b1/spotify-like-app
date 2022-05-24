@@ -23,7 +23,7 @@
 
 <br />
 <div align="center">
-  <img src="https://github.com/0xb0b1/spotify-like-app/blob/master/print.jpg" width="720">
+  <img src="https://github.com/0xb0b1/spotify-like-app/blob/master/2022-05-23-210117_1920x1080_scrot.png" width="720">
 </div>
 
 
