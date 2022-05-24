@@ -28,7 +28,7 @@
 
 
 # :eyes: Demo Website
-👉  demo: https://music-organizer-green.vercel.app
+👉  demo: [https://spotify-like-app.vercel.app](https://spotify-like-app.vercel.app)
 
 # :computer: Technologies
 This project was made using the follow technologies:
