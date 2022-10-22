@@ -1,10 +1,10 @@
-import { QueryClientProvider } from "react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
-import { AllCategories } from "./pages/Categories";
-import { Home } from "./pages/Home";
-import { MyPlaylists } from "./pages/MyPlaylists";
-import { queryClient } from "./services/queryClient";
+import { QueryClientProvider } from 'react-query'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Header } from './components/Header'
+import { AllCategories } from './pages/Categories'
+import { Home } from './pages/Home'
+import { MyPlaylists } from './pages/MyPlaylists'
+import { queryClient } from './services/queryClient'
 
 function App() {
   return (
@@ -12,13 +12,13 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/categories" element={<AllCategories />} />
-          <Route path="/playlists" element={<MyPlaylists />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/categories' element={<AllCategories />} />
+          <Route path='/playlists' element={<MyPlaylists />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
-  );
+  )
 }
 
-export default App;
+export default App
