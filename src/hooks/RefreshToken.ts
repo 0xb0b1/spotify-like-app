@@ -12,6 +12,7 @@ export const useRefreshToken = () => {
   const [token, setToken] = useState<TokenProps>()
 
   const data = {
+    /* eslint-disable camelcase */
     grant_type: 'client_credentials',
   }
 

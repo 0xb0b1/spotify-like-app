@@ -34,19 +34,19 @@ type PlayerContextProviderProps = {
 }
 
 export const PlayerContextProvider = ({ children }: PlayerContextProviderProps) => {
-  const [playlist, setPlaylist] = useState([])
+  // const [playlist, setPlaylist] = useState([])
   const [currentSongIndex, setCurrentSongIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isLooping, setIsLooping] = useState(false)
   const [isShuffling, setIsShuffling] = useState(false)
 
-  const play = (song: Song) => {
+  const play = (/* song: Song */) => {
     // setPlaylist([song]);
     setCurrentSongIndex(0)
     setIsPlaying(true)
   }
 
-  const playList = (list: Song[], index: number) => {
+  const playList = (/* list: Song[], */ index: number) => {
     // setPlaylist(list);
     setCurrentSongIndex(index)
     setIsPlaying(true)
