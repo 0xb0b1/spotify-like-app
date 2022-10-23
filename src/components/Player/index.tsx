@@ -16,7 +16,7 @@ import { converDurationToTimeString } from '../../utils/convertDurationToTimeStr
 export const ShowPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(true)
   const [isShuffle, setIsShuffle] = useState(true)
-  // const [isLooping, setisLooping] = useState(true)
+  const [isLooping, setisLooping] = useState(true)
 
   return (
     <div className='hidden lg:flex flex-col items-center justify-between px-4 py-4 h-home w-96 text-white bg-gradient-to-t from-gray-800'>
