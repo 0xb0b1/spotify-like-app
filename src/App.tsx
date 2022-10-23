@@ -1,10 +1,11 @@
 import { QueryClientProvider } from 'react-query'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { MyPlaylists } from './pages/MyPlaylists'
+
+import { queryClient } from './services/queryClient'
 import { Header } from './components/Header'
 import { AllCategories } from './pages/Categories'
 import { Home } from './pages/Home'
-import { MyPlaylists } from './pages/MyPlaylists'
-import { queryClient } from './services/queryClient'
 
 function App() {
   return (
