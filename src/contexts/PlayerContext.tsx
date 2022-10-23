@@ -1,5 +1,6 @@
 export const foo = () => {
   console.log()
+  console.log()
 }
 // import { createContext, useState, ReactNode, useContext } from 'react'
 
